@@ -20,8 +20,6 @@ ai-content-template
 - 看懂 `website-content.json` 需要哪些欄位。
 - 使用 Gemini 產生 Hero、多筆特色內容與多組 FAQ。
 - 將 AI 產出的 JSON 放回 `website-content.json`。
-- 透過 `imageUrl` 與 `imageAlt` 加入網路圖片連結資料。
-- 使用 Live Server 開啟頁面，確認多張卡片、多組 FAQ 與圖片是否正常顯示。
 
 ## 建議使用時機
 
