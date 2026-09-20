@@ -102,3 +102,5 @@ ai-content-template
 - 每組 FAQ 是否都有 `question` 和 `answer`？
 - 使用 Live Server 開啟後，畫面是否正常顯示？
 - Console 是否有錯誤訊息？
+
+- 從GitHud新增文字
