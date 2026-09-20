@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- 背景莫蘭迪深灰漸層 (增加細緻質感) -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#323236" />
+      <stop offset="100%" stop-color="#2b2b2e" />
+    </radialGradient>
+
+    <!-- 圓環主色漸層：乾燥玫瑰紅 (底層/兩側) -> 燕麥灰金 (頂部) -->
+    <linearGradient id="ringGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#a87676" />
+      <stop offset="55%" stop-color="#b88a7b" />
+      <stop offset="85%" stop-color="#c0a080" />
+      <stop offset="100%" stop-color="#c8a888" />
+    </linearGradient>
+
+    <!-- 柔和光暈濾鏡，提升藝術感與細緻度 -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- 圓形背景 (莫蘭迪深灰 #2b2b2e) -->
+  <circle cx="256" cy="256" r="256" fill="url(#bgGradient)" />
+
+  <!-- 抽象圓環 (乾燥玫瑰紅 #a87676 至 燕麥灰金 #c0a080 漸層) -->
+  <!-- 使用 stroke 繪製圓環，保持乾淨簡潔的幾何線條，非常適合 Favicon 縮小顯示 -->
+  <circle 
+    cx="256" 
+    cy="256" 
+    r="140" 
+    fill="none" 
+    stroke="url(#ringGradient)" 
+    stroke-width="72" 
+    stroke-linecap="round"
+    filter="url(#softGlow)"
+  />
+
+  <!-- 頂部燕麥灰金微光弧線細節 (增加層次感) -->
+  <path 
+    d="M 166 186 A 140 140 0 0 1 346 186" 
+    fill="none" 
+    stroke="#d2b292" 
+    stroke-width="12" 
+    stroke-linecap="round" 
+    opacity="0.4"
+  />
+</svg>

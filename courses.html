@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>課程介紹 - AI Web Craft | 品牌體驗與前端實作班</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          AI Web <span>Craft</span>
+        </a>
+        <button class="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="courses.html" class="active">課程介紹</a></li>
+          <li><a href="contact.html">預約諮詢</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <span class="page-kicker">Learning Path</span>
+      <h1 class="page-title">課程核心學習地圖</h1>
+      <p class="page-subtitle">循序漸進地從 UX 規劃、前端語法基礎到 AI 開發協作，建立能持續調整升級的網站實體。</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- Learning Modules Section -->
+    <section>
+      <div class="container">
+        <h2 class="section-title" id="modules-title">五大學習模組</h2>
+        <p class="section-description" id="modules-description">著重觀念建立與動手實作，每個模組都有明確的進度交付目標。</p>
+        
+        <div class="modules-grid" id="modules-container">
+          <!-- 這裡的模組卡片將由 JavaScript 自動連動 JSON 進行渲染 -->
+          <div class="module-card">
+            <div class="module-number">01</div>
+            <div class="module-content">
+              <h3>從 UX 開始規劃網站架構</h3>
+              <p>學習定義目標使用者與網站核心任務，讓內容及網站架構符合使用者需求。</p>
+              <div class="module-tags">
+                <span class="tag">UX 規劃</span>
+                <span class="tag">使用者需求分析</span>
+                <span class="tag">網站地圖</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="module-card">
+            <div class="module-number">02</div>
+            <div class="module-content">
+              <h3>HTML & CSS 網頁視覺基礎</h3>
+              <p>理解網頁語意化結構，並運用 CSS 進行樣式設定、元件排版與 RWD 尺寸適應。</p>
+              <div class="module-tags">
+                <span class="tag">HTML5 語意化</span>
+                <span class="tag">CSS 排版</span>
+                <span class="tag">主題色彩設計</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="module-card">
+            <div class="module-number">03</div>
+            <div class="module-content">
+              <h3>JavaScript & JSON 資料管理</h3>
+              <p>學習用 JavaScript 讀取 JSON 資料檔，將文字內容與網頁版型分開管理，之後只要修改資料檔，就能更新頁面內容。</p>
+              <div class="module-tags">
+                <span class="tag">原生 JS</span>
+                <span class="tag">Fetch API</span>
+                <span class="tag">JSON 格式化</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="module-card">
+            <div class="module-number">04</div>
+            <div class="module-content">
+              <h3>AI 輔助內容與資料生成</h3>
+              <p>設計明確的 Prompt 指令，引導 AI 產生符合需求格式的網站文案，提高品牌內容產出效率與品質。</p>
+              <div class="module-tags">
+                <span class="tag">Prompt 工程</span>
+                <span class="tag">AI 內容生成</span>
+                <span class="tag">JSON 結構輸出</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="module-card">
+            <div class="module-number">05</div>
+            <div class="module-content">
+              <h3>AI 前端協作與錯誤排除</h3>
+              <p>掌握準確描述需求與錯誤訊息的技巧，讓 AI 成為精準除錯夥伴，並完成風格一致的多頁面網站。</p>
+              <div class="module-tags">
+                <span class="tag">Console 檢測</span>
+                <span class="tag">AI 除錯協作</span>
+                <span class="tag">靜態部署</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="process">
+      <div class="container">
+        <h2 class="section-title">課堂實作流程</h2>
+        <p class="section-description">從需求整理到網站上架，帶你掌握 AI 協作與前端實作的完整工作流。</p>
+
+        <div class="process-grid">
+          <div class="process-item">
+            <div class="process-step">STEP 01</div>
+            <h4>UX 需求與架構梳理</h4>
+            <p>釐清目標使用者、品牌定位與網站任務，規劃首頁與其他頁面的資訊層級。</p>
+          </div>
+          <div class="process-item">
+            <div class="process-step">STEP 02</div>
+            <h4>AI 協作生成 JSON 資料</h4>
+            <p>透過精準 Prompt 引導 AI 產出專屬品牌文案，並生成結構正確的 JSON 資料檔。</p>
+          </div>
+          <div class="process-item">
+            <div class="process-step">STEP 03</div>
+            <h4>前端渲染與樣式微調</h4>
+            <p>運用 JavaScript 動態讀取 JSON 呈現內容，並透過 CSS 調整視覺風格與版面配比。</p>
+          </div>
+          <div class="process-item">
+            <div class="process-step">STEP 04</div>
+            <h4>版本控制與 GitHub 上架</h4>
+            <p>建立 Git 版本控制概念與更新邏輯，將專案推送至 GitHub Pages 完成網站實作發布。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 課程時間與地點區塊 -->
+    <section id="schedule-location">
+      <div class="container">
+        <h2 class="section-title">課程時間與地點</h2>
+        <div class="features-grid">
+          
+          <!-- 上課時間卡片 -->
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>上課時間</h3>
+              <p>
+                日期：2027.1.9 - 2027.2.20（週六）<br>
+                時間：09:00-16:00（午休 1 小時）<br>2027.2.6 適逢農曆春節連假，停課一次。
+              </p>
+            </div>
+          </div>
+
+          <!-- 上課地點卡片 -->
+          <div class="feature-card">
+            <div class="feature-content">
+              <h3>上課地點</h3>
+              <p>
+                華梵大學新北板橋中心<br>
+                新北市板橋區介壽里文化路二段242號6樓<br>
+                詳細教室將於開課前兩週透過 Email 通知。
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcome Section -->
+    <section>
+      <div class="container">
+        <div class="outcome-box">
+          <div class="outcome-info">
+            <h3>完成課程後，你將獲得</h3>
+            <p>不只是完成課堂練習，更能帶走一個可線上瀏覽、結構清楚且後續能彈性擴充與維護的品牌網站。</p>
+            <a href="contact.html" class="btn btn-primary">預約課前諮詢</a>
+          </div>
+          <div>
+            <ul class="outcome-list">
+              <li>一個透過 GitHub Pages 部署上架的多頁面品牌網站</li>
+              <li>具備獨立編修與維護 JSON 資料結構的能力</li>
+              <li>理解 HTML/CSS 核心架構與動態資料渲染機制</li>
+              <li>一套可重複使用的 AI 網站協作與內容生成流程</li>
+              <li>掌握 Git 版本控制基礎與網站更新維護流程</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p id="footer-copyright">© 2026 AI Web Craft | AI 輔助品牌網站與使用者體驗設計實戰班</p>
+    </div>
+  </footer>
+
+  <!-- 引入共用 JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

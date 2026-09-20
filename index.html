@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Web Craft | 品牌體驗與前端實作班</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+
+</head>
+<body>
+
+  <!-- 導覽列 HEADER -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          AI Web <span>Craft</span>
+        </a>
+        <button class="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html" class="active">首頁</a></li>
+          <li><a href="courses.html">課程介紹</a></li>
+          <li><a href="contact.html">預約諮詢</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO 區塊 -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="kicker" id="hero-kicker">載入中...</div>
+          <h1 id="hero-title">載入中...</h1>
+          <p id="hero-subtitle">載入中...</p>
+          <div class="hero-actions">
+            <a href="#features" class="btn btn-primary" id="hero-cta">查看課程特色</a>
+            <a href="courses.html" class="btn btn-outline">了解完整模組</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 課程特色區塊 -->
+    <section id="features">
+      <div class="container">
+        <h2 class="section-title" id="features-title">課程特色</h2>
+        <div class="features-grid" id="features-container">
+          <!-- 動態渲染卡片內容 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 常見問題區塊 -->
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title" id="faq-title">常見問題</h2>
+        <div class="faq-container" id="faq-container">
+          <!-- 動態渲染 FAQ 內容 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 聯絡與行動呼籲區塊 -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <h2 id="contact-title">準備套用自己的品牌內容</h2>
+          <p id="contact-description">請整理品牌名稱、目標對象與網站目的，再請 Gemini 依照這份 JSON 格式產生自己的網站內容。</p>
+          <div class="contact-actions">
+            <a href="contact.html" class="btn btn-primary">立即預約諮詢</a>
+            <a href="courses.html" class="btn btn-outline">查看課程地圖</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER 頁尾 -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p id="footer-copyright">© 2026 AI 輔助網站內容生成練習</p>
+        <p>AI Web Craft | 品牌體驗與前端實作班</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+  <!-- JS 讀取 data/website-content.json 與動態渲染 -->
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('data/website-content.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("無法讀取 JSON 資料， HTTP 狀態碼: " + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          renderContent(data);
+        })
+        .catch(error => {
+          console.error("資料載入失敗:", error);
+          renderFallbackContent();
+        });
+
+      function renderContent(data) {
+        // Render Hero
+        if (data.hero) {
+          document.getElementById('hero-kicker').textContent = data.hero.kicker || "AI 協作課程";
+          document.getElementById('hero-title').textContent = data.hero.title || "";
+          document.getElementById('hero-subtitle').innerHTML = data.hero.subtitle || "";
+          if (data.hero.cta) {
+            document.getElementById('hero-cta').textContent = data.hero.cta;
+          }
+        }
+
+        // Render Features Title & Cards
+        if (data.featuresTitle) {
+          document.getElementById('features-title').textContent = data.featuresTitle;
+        }
+
+        if (Array.isArray(data.features)) {
+          const featuresContainer = document.getElementById('features-container');
+          featuresContainer.innerHTML = '';
+          data.features.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'feature-card';
+            card.innerHTML = `
+              ${item.imageUrl ? `<img class="feature-image" src="${escapeHTML(item.imageUrl)}" alt="${escapeHTML(item.imageAlt || item.title)}">` : ''}
+              <div class="feature-content">
+                <h3>${escapeHTML(item.title)}</h3>
+                <p>${escapeHTML(item.description)}</p>
+              </div>
+            `;
+            featuresContainer.appendChild(card);
+          });
+        }
+
+        // Render FAQ Title & List
+        if (data.faqTitle) {
+          document.getElementById('faq-title').textContent = data.faqTitle;
+        }
+
+        if (Array.isArray(data.faq)) {
+          const faqContainer = document.getElementById('faq-container');
+          faqContainer.innerHTML = '';
+          data.faq.forEach(item => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'faq-item';
+            faqItem.innerHTML = `
+              <h3>Q. ${escapeHTML(item.question)}</h3>
+              <p>${escapeHTML(item.answer)}</p>
+            `;
+            faqContainer.appendChild(faqItem);
+          });
+        }
+
+        // Render Contact
+        if (data.contact) {
+          if (data.contact.title) {
+            document.getElementById('contact-title').textContent = data.contact.title;
+          }
+          if (data.contact.description) {
+            document.getElementById('contact-description').textContent = data.contact.description;
+          }
+        }
+
+        // Render Footer
+        if (data.footer) {
+          document.getElementById('footer-copyright').textContent = data.footer;
+        }
+      }
+
+      // 備用處理（若本地 file:// 協定限制或路徑無法 fetch 時顯示）
+      function renderFallbackContent() {
+        document.getElementById('hero-kicker').textContent = "AI 協作課程";
+        document.getElementById('hero-title').textContent = "用 AI 建立清楚、可維護的網站內容";
+        document.getElementById('hero-subtitle').textContent = "請透過 HTTP Server (如 Live Server) 開啟網頁以完整讀取 JSON 資料。";
+      }
+
+      // XSS 防護輔助函式
+      function escapeHTML(str) {
+        if (!str) return '';
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+    });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      // 1. 接近頁面最上方時（10px 內），保持顯示
+      if (currentScrollY <= 10) {
+        header.classList.remove('nav-hidden');
+      } 
+      // 2. 向下捲動時，隱藏導覽列
+      else if (currentScrollY > lastScrollY) {
+        header.classList.add('nav-hidden');
+      } 
+      // 3. 向上捲動時，顯示導覽列
+      else {
+        header.classList.remove('nav-hidden');
+      }
+
+      lastScrollY = currentScrollY;
+    });
+
+    // 手機版漢堡選單邏輯
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (navToggle && navMenu) {
+      const closeMenu = () => {
+        navToggle.classList.remove('is-active');
+        navMenu.classList.remove('is-active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', '開啟導覽選單');
+      };
+
+      navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('is-active');
+        navToggle.classList.toggle('is-active');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', isOpen ? '關閉導覽選單' : '開啟導覽選單');
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    }
+  });
+  </script> -->
+</body>
+</html>

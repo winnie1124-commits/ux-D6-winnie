@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "kicker": "從零打造可維護的品牌官網",
+    "title": "AI 輔助品牌網站與UX設計實戰班",
+    "subtitle": "用 AI 做出看得懂、能修改、可上架的品牌網站，從需求整理、前端實作到 GitHub 發布，<br>完成一個可維護的多頁網站雛形。",
+    "cta": "查看課程特色"
+  },
+  "featuresTitle": "你會在課程中學到什麼",
+  "features": [
+    {
+      "title": "從 UX 規劃網站方向",
+      "description": "先釐清目標使用者、網站任務與頁面內容，讓 AI 生成結果更貼近真實需求。",
+      "imageUrl": "images/feature-ux.jpg",
+      "imageAlt": "筆電螢幕顯示網站規劃與協作介面"
+    },
+    {
+      "title": "用 AI 協助編寫及修改程式",
+      "description": "學習把需求說清楚，請 AI 協助產出與修正 HTML、CSS、JavaScript 與 JSON。",
+      "imageUrl": "images/feature-ai.jpg",
+      "imageAlt": "螢幕上顯示資料圖表與網站分析介面"
+    },
+    {
+      "title": "建立可維護的靜態網站架構",
+      "description": "整理共用樣式、互動功能與常更新內容，為 GitHub 上架與後續維護打好基礎。",
+      "imageUrl": "images/feature-website.jpg",
+      "imageAlt": "明亮工作空間中有人檢查網站內容與文件"
+    }
+  ],
+  "faqTitle": "課前常見問題",
+  "faq": [
+    {
+      "question": "完全沒寫過程式也可以參加嗎？",
+      "answer": "可以。課程會從 UX 規劃、HTML/CSS 基礎與 JavaScript 互動概念開始，並透過 AI 輔助降低從零實作網站的門檻。"
+    },
+    {
+      "question": "課程會要求背熟程式語法嗎？",
+      "answer": "不會。課程重點是讓學員能說清楚需求、看懂 AI 產出的基本結構，並使用瀏覽器與 Console 檢查問題。"
+    },
+    {
+      "question": "上完課可以完成什麼成果？",
+      "answer": "學員會完成一個可開啟、可瀏覽、可整理維護的多頁靜態網站，並在後續課程銜接 GitHub 與網站上架。"
+    }
+  ],
+  "contact": {
+    "title": "想把自己的品牌做成網站？",
+    "description": "這門課會帶你從需求整理開始，透過 AI 協作完成網站雛形，並學會檢查、修正與維護靜態網站。"
+  },
+  "footer": "© 2026 AI 輔助品牌網站與使用者體驗設計實戰班",
+
+  "modulesTitle": "五大學習模組",
+  "modulesDescription": "著重觀念建立與動手實作，每個模組都有明確的進度交付目標。",
+  "modules": [
+    {
+      "id": "01",
+      "title": "從 UX 開始規劃網站架構",
+      "description": "學習定義目標使用者與網站核心任務，讓內容及網站架構符合使用者需求。",
+      "imageUrl": "",
+      "imageAlt": "",
+      "tags": ["UX 規劃", "使用者需求分析", "網站地圖"]
+    },
+    {
+      "id": "02",
+      "title": "HTML & CSS 網頁視覺基礎",
+      "description": "理解網頁語意化結構，並運用 CSS 進行樣式設定、元件排版與 RWD 尺寸適應。",
+      "imageUrl": "",
+      "imageAlt": "",
+      "tags": ["HTML5 語意化", "CSS 排版", "主題色彩設計"]
+    },
+    {
+      "id": "03",
+      "title": "JavaScript & JSON 資料管理",
+      "description": "學習用 JavaScript 讀取 JSON 資料檔，將文字內容與網頁版型分開管理，之後只要修改資料檔，就能更新頁面內容。",
+      "imageUrl": "",
+      "imageAlt": "",
+      "tags": ["原生 JS", "Fetch API", "JSON 格式化"]
+    },
+    {
+      "id": "04",
+      "title": "AI 輔助內容與資料生成",
+      "description": "設計明確的 Prompt 指令，引導 AI 產生符合需求格式的網站文案，提高品牌內容產出效率與品質。",
+      "imageUrl": "",
+      "imageAlt": "",
+      "tags": ["Prompt 工程", "AI 內容生成", "JSON 結構輸出"]
+    },
+    {
+      "id": "05",
+      "title": "AI 前端協作與錯誤排除",
+      "description": "掌握準確描述需求與錯誤訊息的技巧，讓 AI 成為精準除錯夥伴，並完成風格一致的多頁面網站。",
+      "imageUrl": "",
+      "imageAlt": "",
+      "tags": ["Console 檢測", "AI 除錯協作", "靜態部署"]
+    }
+  ]
+}

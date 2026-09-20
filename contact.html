@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>預約諮詢 - AI Web Craft | 品牌體驗與前端實作班</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          AI Web <span>Craft</span>
+        </a>
+        <button class="nav-toggle" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="courses.html">課程介紹</a></li>
+          <li><a href="contact.html" class="active">預約諮詢</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <span class="page-kicker">Get In Touch</span>
+      <h1 class="page-title">預約課程諮詢與報名</h1>
+      <p class="page-subtitle">請填寫下方表單提出您的需求，我們將在 1-2 個工作天內由專人與您聯繫。</p>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Consultation Form -->
+          <div class="form-card">
+            <h2 class="form-title">諮詢需求表單</h2>
+            <form action="#" method="post" onsubmit="event.preventDefault(); alert('感謝您的諮詢預約！我們將盡快與您聯繫。');">
+              <div class="form-group">
+                <label for="name">姓名 / 稱呼 *</label>
+                <input type="text" id="name" name="name" required placeholder="請輸入您的姓名">
+              </div>
+
+              <div class="form-group">
+                <label for="email">電子郵件 *</label>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
+              </div>
+
+              <div class="form-group">
+                <label for="identity">您的背景身分</label>
+                <select id="identity" name="identity">
+                  <option value="beginner">沒有寫過程式的完全初學者</option>
+                  <option value="freelancer">自由工作者 / 個人品牌經營者</option>
+                  <option value="designer">設計師 / 想跨足 UI/UX 的學員</option>
+                  <option value="other">其他</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="goal">您希望打造的網站類型</label>
+                <select id="goal" name="goal">
+                  <option value="personal">個人品牌官網</option>
+                  <option value="portfolio">作品集網站</option>
+                  <option value="course">課程或活動宣傳頁</option>
+                  <option value="service">服務介紹頁</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">您的主要疑問或補充說明</label>
+                <textarea id="message" name="message" rows="5" placeholder="例如：想了解上課前需要準備什麼工具？完全沒有經驗跟得上嗎？"></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">送出預約諮詢</button>
+            </form>
+          </div>
+
+          <!-- Side Info Panel -->
+          <div class="info-panel">
+            
+            <!-- Quick FAQ -->
+            <div class="info-card">
+              <h3>課前常見疑問</h3>
+              <ul class="faq-mini-list">
+                <li>
+                  <strong>Q: 上課需要準備高規格電腦嗎？</strong>
+                  <p>不需要，上課場地備有公用電腦，如需自備筆電，只要具備基礎上網能力、安裝 Chrome 瀏覽器與 VS Code 文字編輯器即可。</p>
+                </li>
+                <li>
+                  <strong>Q: 需要付費購買 AI 工具帳號嗎？</strong>
+                  <p>課堂練習使用免費版 AI 工具即可順利進行，不需要額外付費訂閱高級方案。</p>
+                </li>
+                <li>
+                  <strong>Q: 課程的授課形式與上課地點在哪裡？</strong>
+                  <p>本課程採實體教學，上課地點位於華梵大學新北板橋中心（詳細教室與交通指引將於開課前2週透過 Email 通知）。</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Notice -->
+            <div class="info-card contact-details">
+              <h3>聯絡資訊補充</h3>
+              <p><strong>回覆時間：</strong>週一至週五 10:00 - 18:00</p>
+              <p><strong>諮詢信箱：</strong>support@aiwebcraft.example</p>
+              <p><strong>適合對象：</strong>無程式背景、想用 AI 打造實用網站雛形的初學者與創作者。</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>© 2026 AI Web Craft | AI 輔助品牌網站與使用者體驗設計實戰班</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
